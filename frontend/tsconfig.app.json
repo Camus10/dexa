@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode (Vite) */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Alias "@/" ke "src/".
+       Sejak TypeScript 5, "paths" boleh dipakai tanpa "baseUrl" - nilainya
+       dihitung relatif terhadap file tsconfig ini. Sejak TS 6 "baseUrl" sudah
+       deprecated, jadi sengaja tidak dipakai. Harus sama dengan
+       resolve.alias di vite.config.ts. */
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+
+    /* Pemeriksaan tipe */
+    "strict": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src"]
+}

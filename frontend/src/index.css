@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply font-outfit antialiased;
+  }
+
+  body {
+    @apply bg-gray-50 text-theme-sm text-gray-700 dark:bg-gray-900 dark:text-gray-300;
+  }
+
+  /* Scrollbar tipis supaya daftar panjang tetap rapi */
+  * {
+    scrollbar-width: thin;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .menu-item {
+    @apply relative flex w-full items-center gap-3 rounded-lg px-3 py-2 text-theme-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-white/5;
+  }
+
+  .menu-item-active {
+    @apply bg-brand-50 text-brand-600 dark:bg-brand-500/15 dark:text-brand-400;
+  }
+
+  /* Animasi masuk untuk halaman/modal */
+  .animate-fade-in {
+    animation: fade-in 0.2s ease-out;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

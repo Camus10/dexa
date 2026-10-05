@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Environment variables (JANGAN abaikan .env.example)
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Build output
+dist/
+build/
+
+# Uploads (foto absensi)
+uploads/
+
+# Logs (juga berisi token/dev log dari scripts lokal)
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Coverage / test
+coverage/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
